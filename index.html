@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabla POO</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container pt-3">
+    <div class="text-center mb-5">
+      <h2>Registro Vehículo</h2>
+    </div>
+
+    <form action="" autocomplete="off" class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="select_tipo_vh" class="form-label">Tipo Vehículo</label>
+          <select class="form-select" id="select_tipo_vh" required>
+            <option disabled selected value="">Seleccione tipo de Vehículo...</option>
+            <option value="camion">Camion</option>
+            <option value="camioneta">Camioneta</option>
+            <option value="piaggio">Piaggio</option>
+            <option value="otros">otros</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor seleccione una opción.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="text_marca_vh" class="form-label">Marca</label>
+          <input type="text" class="form-control" id="text_marca_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="text_modelo_vh" class="form-label">Modelo</label>
+          <input type="text" class="form-control" id="text_modelo_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="number_ejes_vh" class="form-label">Número de ejes</label>
+          <input type="number" class="form-control" id="number_ejes_vh" required><br>
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label for="select_traccion_vh" class="form-label">Tipo de Tracción</label>
+          <select class="form-select" id="select_traccion_vh" required>
+            <option selected disabled value="">Seleccione tipo Tracción...</option>
+            <option value="4x2">4x2</option>
+            <option value="4x4">4x4</option>
+            <option value="6x2">6x2</option>
+            <option value="6x4">6x4</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor seleccione una opción.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="text_placa_vh" class="form-label">Placa</label>
+          <input type="text" class="form-control" id="text_placa_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="text_placa_SR_vh" class="form-label">Placa Trailer</label>
+          <input type="text" class="form-control" id="text_placa_SR_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="number_peso_vh" class="form-label">Peso vacio</label>
+          <input type="number" class="form-control" id="number_peso_vh" required /><br>
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label for="select_combustible_vh" class="form-label">Tipo combustible</label>
+          <select class="form-select" id="select_combustible_vh" required>
+            <option disabled selected value="">Seleccione tipo de combustible...</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="disel">Disel</option>
+            <option value="electrico">Electrico</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor seleccione una opción.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="number_licencia_vh" class="form-label">Número licencia</label>
+          <input type="number" class="form-control" id="number_licencia_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="number_soat_vh" class="form-label">Número SOAT</label>
+          <input type="number" class="form-control" id="number_soat_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="date_vencimiento_soat_vh" class="form-label">Fecha vencimiento SOAT</label>
+          <input type="date" class="form-control" id="date_vencimiento_soat_vh" min="2021-01-01" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="number_poliza_vh" class="form-label">Número poliza de responsabilidad</label>
+          <input type="number" class="form-control" id="number_poliza_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="number_tecnomecanica_vh" class="form-label">Número de tecnomecanica</label>
+          <input type="number" class="form-control" id="number_tecnomecanica_vh" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="date_vencimiento_tecnomecanica_vh" class="form-label">Fecha vencimiento Tecnomecanica</label>
+          <input type="date" class="form-control" id="date_vencimiento_tecnomecanica_vh" min="2021-01-01" required />
+          <div class="invalid-feedback">
+            Por favor complete este campo.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center mt-5">
+          <button class="btn btn-primary" type="button"
+          onclick="instmisObjetos.agregarVehiculo(select_tipo_vh.value, text_marca_vh.value, text_modelo_vh.value, number_ejes_vh.value, select_traccion_vh.value, text_placa_vh.value, text_placa_SR_vh.value, number_peso_vh.value, select_combustible_vh.value, number_licencia_vh.value, number_soat_vh.value, date_vencimiento_soat_vh.value, number_poliza_vh.value, number_tecnomecanica_vh.value, date_vencimiento_tecnomecanica_vh.value)">Enviar
+          Formulario GET</button>
+          
+      </div>
+    </form>
+  </div>
+  <script src="./js/validacion.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
