@@ -7,7 +7,7 @@ class Flota {
   vehiculo = {
     _tipoVehiculo: "",
     _marcaVehiculo: "",
-    _modeloVehiculo: "",
+    _modeloVehiculo: 0,
     _numeroEjesVehiculo: 0,
     _tipoTraccionVehiculo: "",
     _placaVehiculo: "",
@@ -24,6 +24,11 @@ class Flota {
 
   agregarVehiculo(tipo, marca, modelo, numEjes, traccion, placa, placaSR, pesoVH, combustible, licenciaVH, soatVH, venciSoat, polizaRes, tecnoVH, venciTecno) {
 
+    if(tipo=="", marca=="" , modelo==0 , numEjes==0 , traccion=="" , placa=="" , placaSR=="" , pesoVH==0 , combustible=="" , licenciaVH=="" , soatVH=="" , venciSoat==0 , polizaRes==0 , tecnoVH==0 , venciTecno==0){
+
+      alert("Ingrese todos los datos")
+
+    }else{
     this.vehiculo._tipoVehiculo = tipo;
     this.vehiculo._marcaVehiculo = marca;
     this.vehiculo._modeloVehiculo = modelo;
@@ -41,6 +46,8 @@ class Flota {
     this.vehiculo._fechaVencimientoTecnomecanica = venciTecno;
 
     console.table(this.getVehiculo);
+
+    }
   
   }
 

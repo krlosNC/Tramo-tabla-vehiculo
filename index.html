@@ -16,7 +16,7 @@
       <h2>Registro Vehículo</h2>
     </div>
 
-    <form action="" autocomplete="off" class="needs-validation" novalidate>
+    <form action="" autocomplete="off" class="needs-validation" novalidate onsubmit="return instmisObjetos.agregarVehiculo(select_tipo_vh.value, text_marca_vh.value, text_modelo_vh.value, number_ejes_vh.value, select_traccion_vh.value, text_placa_vh.value, text_placa_SR_vh.value, number_peso_vh.value, select_combustible_vh.value, number_licencia_vh.value, number_soat_vh.value, date_vencimiento_soat_vh.value, number_poliza_vh.value, number_tecnomecanica_vh.value, date_vencimiento_tecnomecanica_vh.value)">
       <div class="row">
         <div class="col-md-4 mb-3">
           <label for="select_tipo_vh" class="form-label">Tipo Vehículo</label>
@@ -41,8 +41,8 @@
         </div>
 
         <div class="col-md-4">
-          <label for="text_modelo_vh" class="form-label">Modelo</label>
-          <input type="text" class="form-control" id="text_modelo_vh" required />
+          <label for="number_modelo_vh" class="form-label">Modelo</label>
+          <input type="number" class="form-control" id="number_modelo_vh" required />
           <div class="invalid-feedback">
             Por favor complete este campo.
           </div>
@@ -149,9 +149,8 @@
         </div>
       </div>
       <div class="col-12 text-center mt-5">
-          <button class="btn btn-primary" type="button"
-          onclick="instmisObjetos.agregarVehiculo(select_tipo_vh.value, text_marca_vh.value, text_modelo_vh.value, number_ejes_vh.value, select_traccion_vh.value, text_placa_vh.value, text_placa_SR_vh.value, number_peso_vh.value, select_combustible_vh.value, number_licencia_vh.value, number_soat_vh.value, date_vencimiento_soat_vh.value, number_poliza_vh.value, number_tecnomecanica_vh.value, date_vencimiento_tecnomecanica_vh.value)">Enviar
-          Formulario GET</button>
+          <button class="btn btn-primary" type="button" 
+          onclick="instmisObjetos.agregarVehiculo(select_tipo_vh.value, text_marca_vh.value, number_modelo_vh.value, number_ejes_vh.value, select_traccion_vh.value, text_placa_vh.value, text_placa_SR_vh.value, number_peso_vh.value, select_combustible_vh.value, number_licencia_vh.value, number_soat_vh.value, date_vencimiento_soat_vh.value, number_poliza_vh.value, number_tecnomecanica_vh.value, date_vencimiento_tecnomecanica_vh.value)">Registrar Datos</button>
           
       </div>
     </form>
