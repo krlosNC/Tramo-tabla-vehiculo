@@ -1,7 +1,6 @@
 //__________________________________________________________________________//
 //____________________________   GET    ____________________________________//
 //__________________________________________________________________________//
-
 class Flota {
 
   vehiculo = {
@@ -59,4 +58,168 @@ class Flota {
 
 var instmisObjetos = new Flota();
 
+/*
+var db = openDatabase("itemDB", "1.0", "itemDB", 65535);
 
+$(function () {
+  // crear la tabla de productos
+  $("#crear").click(function () {
+    db.transaction(function (transaction) {
+      var sql =
+        "CREATE TABLE vehiculos " +
+        "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+        "tipo VARCHAR(10) NOT NULL, " +
+        "marca VARCHAR(15) NOT NULL," +
+        "modelo NUMBER(4) NOT NULL," +
+        "numEjes NUMBER(10) NOT NULL," +
+        "traccion VARCHAR(3) NOT NULL, " +
+        "placa VARCHAR(10) NOT NULL," +
+        "placaSR VARCHAR(10) NOT NULL," +
+        "pesoVH NUMBER(10) NOT NULL," +
+        "combustible VARCHAR(10) NOT NULL, " +
+        "licenciaVH NUMBER(20) NOT NULL," +
+        "soatVH NUMBER(20) NOT NULL," +
+        "venciSoat NUMBER(10) NOT NULL," +
+        "polizaRes NUMBER(20) NOT NULL," +
+        "tecnoVH NUMBER(20) NOT NULL, " +
+        "venciTecno NUMBER(10) NOT NULL)";
+      transaction.executeSql(
+        sql,
+        undefined,
+        function () {
+          alert("Tabla vehículo creada satisfactoriamente");
+        },
+        function (transaction, err) {
+          alert(err.message);
+        }
+      );
+    });
+  });
+
+  //insertar registros
+  $("#insertar").click(function () {
+    var tipo = $("#select_tipo_vh").val();
+    var marca = $("#text_marca_vh").val();
+    var modelo = $("#number_modelo_vh").val();
+    var numEjes = $("#number_ejes_vh").val();
+    var traccion = $("#select_traccion_vh").val();
+    var placa = $("#text_placa_vh").val();
+    var placaSR = $("#text_placa_SR_vh").val();
+    var pesoVH = $("#number_peso_vh").val();
+    var combustible = $("#select_combustible_vh").val();
+    var licenciaVH = $("#number_licencia_vh").val();
+    var soatVH = $("#number_soat_vh").val();
+    var venciSoat = $("#date_vencimiento_soat_vh").val();
+    var polizaRes = $("#number_poliza_vh").val();
+    var tecnoVH = $("#number_tecnomecanica_vh").val();
+    var venciTecno = $("#date_vencimiento_tecnomecanica_vh").val();
+
+    db.transaction(function (transaction) {
+      var sql =
+        "INSERT INTO vehiculos(tipo, marca, modelo, numEjes, traccion, placa, placaSR, pesoVH, combustible, licenciaVH, soatVH, venciSoat, polizaRes, tecnoVH, venciTecno) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      transaction.executeSql(
+        sql,
+        [
+          tipo,
+          marca,
+          modelo,
+          numEjes,
+          traccion,
+          placa,
+          placaSR,
+          pesoVH,
+          combustible,
+          licenciaVH,
+          soatVH,
+          venciSoat,
+          polizaRes,
+          tecnoVH,
+          venciTecno,
+        ],
+        function () {},
+        function (transaction, err) {
+          alert(err.message);
+        }
+      );
+    });
+    cargarDatos();
+  });
+
+  function cargarDatos() {
+    $("#listaProductos").children().remove();
+    db.transaction(function (transaction) {
+      var sql = "SELECT * FROM vehiculos ORDER BY id DESC";
+      transaction.executeSql(
+        sql,
+        undefined,
+        function (transaction, result) {
+          if (result.length) {
+            for (var i = 0; i < result.length; i++) {
+              var id = id;
+              var tipo = tipo;
+              var marca = marca;
+              var modelo = modelo;
+              var numEjes = numEjes;
+              var traccion = traccion;
+              var placa = placa;
+              var placaSR = placaSR;
+              var pesoVH = pesoVH;
+              var combustible = combustible;
+              var licenciaVH = licenciaVH;
+              var soatVH = soatVH;
+              var venciSoat = venciSoat;
+              var polizaRes = polizaRes;
+              var tecnoVH = tecnoVH;
+              var venciTecno = venciTecno;
+              $("#listaProductos").append(
+                console.log(
+                  id,
+                  tipo,
+                  marca,
+                  modelo,
+                  numEjes,
+                  traccion,
+                  placa,
+                  placaSR,
+                  pesoVH,
+                  combustible,
+                  licenciaVH,
+                  soatVH,
+                  venciSoat,
+                  polizaRes,
+                  tecnoVH,
+                  venciTecno
+                )
+              );
+            }
+          } else {
+            console.error("no ay vehiculos registrados");
+          }
+        },
+        function (transaction, err) {
+          alert(err.message);
+        }
+      );
+    });
+  }
+
+  // Para borrar toda la lista de Registros
+  $("#borrarTodo").click(function () {
+    if (
+      !confirm(
+        "Está seguro de borrar la tabla?, los datos se perderán permanentemente",
+        ""
+      )
+    )
+      return;
+    db.transaction(function (transaction) {
+      var sql = "DROP TABLE vehiculos";
+      transaction.executeSql(sql, undefined, function () {
+        alert(
+          "Tabla borrada satisfactoriamente, Por favor, actualice la página"
+        );
+      });
+    });
+  });
+});
+*/
